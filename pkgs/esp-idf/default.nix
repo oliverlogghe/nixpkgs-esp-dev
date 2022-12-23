@@ -21,7 +21,8 @@ let
       # Remove things from requirements.txt that aren't necessary and mach-nix can't parse:
       # - Comment out Windows-specific "file://" line.
       # - Comment out ARMv7-specific "--only-binary" line.
-      requirementsOriginalText = builtins.readFile "${src}/requirements.txt";
+      #requirementsOriginalText = builtins.readFile "${src}/requirements.txt";
+      requirementsOriginalText = builtins.readFile "${src}/tools/requirements/requirements.core.txt";
       requirementsText = builtins.replaceStrings
         [ "file://" "--only-binary" ]
         [ "#file://" "#--only-binary" ]

@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
   inherit version;
 
   src = fetchurl {
-    url = "https://github.com/espressif/crosstool-NG/releases/download/esp-${version}/xtensa-esp32-elf-gcc11_2_0-esp-${version}-linux-amd64.tar.gz";
+    url = "https://github.com/espressif/crosstool-NG/releases/download/esp-${version}/xtensa-esp32-elf-gcc11_2_0-esp-${version}-linux-amd64.tar.xz";
     inherit hash;
   };
 
